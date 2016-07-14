@@ -29,3 +29,4 @@ We would love for you to help make the skeleton more awesome, There are three wa
 3. Code review an open pull request!
 
 Be prepared to give and receive specific, actionable, and kind feedback!
+/Users/ericbooker/Desktop/Screen Shot 2016-07-14 at 4.04.20 PM.png
