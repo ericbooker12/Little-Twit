@@ -8,4 +8,3 @@ class CreateTweets < ActiveRecord::Migration
   	end
   end
 end
-P

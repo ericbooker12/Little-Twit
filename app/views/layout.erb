@@ -16,12 +16,20 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <div class="nav navbar-nav navbar-right">
 
+         
+
+          <% if current_user %>
           <li class="page-scroll">
-            <a href="#">Sign Up</a>
+            <a href="/sessions/logout">Log Out</a>
+           <% else %>
+            <li class="page-scroll">
+            <a href="/users/new">Sign Up</a>
           </li>
           <li class="page-scroll">
-            <a href="#">Log In</a>
+            <a href="/sessions/new">Log In</a>
           </li>
+          </li>
+          <% end %>
         </div>
       </div>
       <!-- /.navbar-collapse -->

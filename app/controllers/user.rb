@@ -16,5 +16,12 @@ end
 
 get '/users/:id' do
 	@user = User.find(params[:id])
+	@users = User.all
+	@tweets = Tweet.where(user_id: @user.id)
 	erb :"/users/show"
 end
+
+# get '/users' do 
+# 	@users = User.all
+
+# end

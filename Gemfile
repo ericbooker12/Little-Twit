@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'pry-byebug'
 # PostgreSQL driver
 gem 'pg'
 

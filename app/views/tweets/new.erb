@@ -1,0 +1,11 @@
+<form class="form-signin" action="/tweets" method="post">
+	<input type="hidden" name="tweets[user_id]" value="<%= current_user.id %> ">
+	
+	<h2 class="form-signin-heading">Write a Twiit</h2>
+	
+	<!-- <label for="inputEmail" class="sr-only">here:</label> -->
+	<input name="tweets[content]" type="text" id="inputEmail" class="form-control" placeholder="Write your twiit" required="" autofocus="">
+	
+	
+	<button class="btn btn-lg btn-primary btn-block" type="submit">POST</button>
+</form>
