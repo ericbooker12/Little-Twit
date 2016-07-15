@@ -31,6 +31,7 @@ h6 {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
+  color: #00aced;
 }
 hr.star-light,
 hr.star-primary {
@@ -70,7 +71,7 @@ hr.star-primary:after {
 }
 header {
   text-align: center;
-  background: #00aced;
+  background: #ffffff;
   color: white;
 }
 header .container {
@@ -80,6 +81,8 @@ header .container {
 header img {
   display: block;
   margin: 0 auto 20px;
+  width: 100%;
+  height: auto
 }
 header .intro-text .name {
   display: block;
@@ -96,6 +99,7 @@ header .intro-text .skills {
   header .container {
     padding-top: 200px;
     padding-bottom: 100px;
+    background-color: #ffffff;
   }
   header .intro-text .name {
     font-size: 4.75em;
@@ -105,7 +109,7 @@ header .intro-text .skills {
   }
 }
 .navbar-custom {
-  background: #48b9c7;;
+  background: #00aced;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-transform: uppercase;
   font-weight: 700;
@@ -130,7 +134,7 @@ header .intro-text .skills {
   color: white;
 }
 .navbar-custom .navbar-nav li a:hover {
-  color: #48b9c7;
+  color: #00aced;
   outline: none;
 }
 .navbar-custom .navbar-nav li a:focus,
@@ -139,13 +143,13 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-nav li.active a {
   color: white;
-  background: #18BC9C;
+  background: #00aced;
 }
 .navbar-custom .navbar-nav li.active a:hover,
 .navbar-custom .navbar-nav li.active a:focus,
 .navbar-custom .navbar-nav li.active a:active {
   color: white;
-  background: #18BC9C;
+  background: #00aced;
 }
 .navbar-custom .navbar-toggle {
   color: white;
@@ -155,16 +159,24 @@ header .intro-text .skills {
 }
 .navbar-custom .navbar-toggle:hover,
 .navbar-custom .navbar-toggle:focus {
-  background-color: #18BC9C;
+  background-color: #00aced;
   color: white;
-  border-color: #18BC9C;
+  border-color: #00aced;
 }
+
+.navbar  {
+  background-color: #00aced;
+}
+
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
     -moz-transition: padding 0.3s;
     transition: padding 0.3s;
+  }
+  .navbar .container {
+    background-color: #00aced;
   }
   .navbar-custom .navbar-brand {
     font-size: 2em;
