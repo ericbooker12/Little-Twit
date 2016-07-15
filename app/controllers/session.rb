@@ -3,7 +3,8 @@ get '/sessions/new' do
 end
 
 post '/sessions' do 
-	@user = User.find_by( params[:user][:username])
+	@user = User.find_by(username: params[:user][:username])
+
 
 	if @user && @user.authenticate(params[:user][:password])
 		session[:user_id] = @user.id
@@ -14,7 +15,14 @@ post '/sessions' do
 	end
 end
 
-delete '/sessions/:id' do 
-	session[:id] = nil
+get '/sessions/logout' do
+	p '$' * 100
+	p session
+	session[:user_id] = nil
+	current_user = nil
 	redirect '/'
 end
+
+
+
+

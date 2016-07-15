@@ -1,0 +1,8 @@
+<main role="main">
+  <ul class="tweets">
+    <% @user.each do |user|%>
+    <li class="ind_tweet"><%= user.username %></li>
+    <% end %>
+  </ul>
+
+</main>

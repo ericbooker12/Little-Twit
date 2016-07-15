@@ -1,1 +1,79 @@
-Profile page
+<!-- you'll want to print all tweets -->
+
+<div class="container">
+
+    <!-- Portfolio Item Heading -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Welcome to your page <%= @user.username %>
+
+            </h1>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!-- Portfolio Item Row -->
+    <div class="row">
+
+            <!-- <div class="col-md-8">
+                <img class="img-responsive" src="http://placehold.it/750x500" alt="">
+            </div> -->
+<form class="form-signin" action="/tweets" method="post">
+    <input type="hidden" name="tweets[user_id]" value="<%= session[:user_id] %> ">
+    
+    <h2 class="form-signin-heading">Write a Twiit</h2>
+    
+    <!-- <label for="inputEmail" class="sr-only">here:</label> -->
+    <input name="tweets[content]" type="text" id="inputEmail" class="form-control" placeholder="Write your twiit" required="" autofocus="">
+    
+    
+    <button class="btn btn-lg btn-primary btn-block" type="submit">POST</button>
+</form>
+            <div class="col-md-4">
+                <h3>Tweets</h3>
+                <ul class="tweets">
+                    <% @tweets.each do |tweet|%>
+                    <li class="ind_tweet"><%= tweet.content %></li>
+                    <% end %>   
+                </ul>
+             </div>       
+
+
+               
+            </div>
+
+        </div>
+        <!-- /.row -->
+
+        <!--  -->
+        <!-- /.row -->
+
+
+ <ul class="users">
+    <% @users.each do |user|%>
+    <li class="ind_tweet"><%= user.username %></li>
+
+
+    <form method="post" action="/relationships">
+    <input type="hidden" name="relationship[:follower_id]" value="<%= current_user.id %>">
+    <input type="hidden" name="relationship[:following_id]" value="<%=user.id %>">
+    <input type="submit" value= "Follow <%= user.username %>">
+
+    <% end %>
+
+  </ul>
+  </form>
+
+        <hr>
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>Copyright © Your Website 2014</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+    </div>
