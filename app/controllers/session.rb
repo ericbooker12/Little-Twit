@@ -3,11 +3,11 @@ get '/sessions/new' do
 end
 
 post '/sessions' do 
-	@user = User.find_by(username: params[:username])
+	@user = User.find_by( params[:user][:username])
 
-	if @user && @user.authenticate(params[:password])
-		sessions[:user_id] = @user.id
-		redirect "/users/#{session[:id]}"
+	if @user && @user.authenticate(params[:user][:password])
+		session[:user_id] = @user.id
+		redirect "/users/#{session[:user_id]}"
 	else
 		@error = "Incorrect login info"
 		redirect "/sessions/new"

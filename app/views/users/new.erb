@@ -1,9 +1,25 @@
+
+<% if @error %>
+<%= @error %>
+<% end %>
+
+
 <form class="form-signin" action="/users" method="post">
 	<h2 class="form-signin-heading">Sign up for Twit</h2>
 	<label for="inputEmail" class="sr-only">User Name</label>
-	<input name="username" type="text" id="inputEmail" class="form-control" placeholder="User Name" required="" autofocus="">
+	<input name="user[username]" type="text" id="inputEmail" class="form-control" placeholder="User Name" required="" autofocus="">
+	<label for="inputPassword" class="sr-only">Password</label>
+	<input name="user[password]" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+	
+	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+</form>
+
+<!-- <form class="users" action="/users" method="post">
+	<h2 class="header">Sign up for Twit</h2>
+	<label for="username" class="username">User Name</label>
+	<input name="username" type="text" id="username" class="form-control" placeholder="User Name" required="" autofocus="">
 	<label for="inputPassword" class="sr-only">Password</label>
 	<input name="password" type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
 	
 	<button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
-</form>
+</form> -->

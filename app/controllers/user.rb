@@ -8,7 +8,7 @@ post '/users' do
 	if @user.save
 		redirect "/sessions/new"
 	else
-		@error = "@user.errors.full_messages"
+		@error = @user.errors.full_messages
 		erb :"/users/new"
 	end
 
