@@ -1,0 +1,25 @@
+<header>
+  <div class="container">
+    <nav>
+            <a class="center" href="#page-top">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+    </nav>
+    <nav>
+      <div id="nav nav-bar-right">
+        <% if current_user %>
+          <li>
+            <a href="/sessions/logout">Log Out</a>
+          </li>
+         <% else %>
+          <li>
+            <a href="/users/new">Sign Up</a>
+          </li>
+          <li>
+            <a href="/sessions/new">Log In</a>
+          </li>
+        <% end %>
+      </div>
+    </nav>
+  </div>
+</header>

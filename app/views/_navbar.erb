@@ -1,0 +1,26 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+
+
+      <a class="navbar-brand" href="#">
+        <i class="fa fa-twitter" aria-hidden="true"></i>
+      </a>
+
+      <a class="navbar-brand" href="#">Little Twit</a>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+      <% if current_user %>
+        <li><a href="/sessions/logout">Log Out</a></li>
+      <% else %>
+        <li><a href="/users/new">Sign Up</a></li>
+        <li><a href="/sessions/new">Log In</a></li>
+      <% end %>
+
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

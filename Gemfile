@@ -15,6 +15,9 @@ gem 'rake'
 
 gem 'shotgun'
 
+gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sass-rails', '>= 3.2'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'

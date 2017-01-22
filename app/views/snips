@@ -1,0 +1,32 @@
+ <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom affix-top">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header page-scroll">
+
+        <a class="navbar-brand" href="#page-top"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <div class="nav navbar-nav navbar-right">
+
+
+
+          <% if current_user %>
+          <li class="page-scroll">
+            <a href="/sessions/logout">Log Out</a>
+           <% else %>
+            <li class="page-scroll">
+            <a href="/users/new">Sign Up</a>
+          </li>
+          <li class="page-scroll">
+            <a href="/sessions/new">Log In</a>
+          </li>
+          </li>
+          <% end %>
+        </div>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
