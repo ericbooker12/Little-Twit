@@ -11,9 +11,12 @@
   </head>
 <body>
 
-    <%= erb :_navbar %>
-  <div class="container">
-    <%= yield %>
-  </div>
+  <%= erb :_navbar %>
+
+    <div class="container">
+      <%= yield %>
+    </div>
+
+  <%= erb :_footer %>
 </body>
 </html>
