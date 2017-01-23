@@ -2,3 +2,24 @@
     background-color: #1dcaff;
     border-color: #E7E7E7;
 }
+
+.user {
+	margin-top: 5em;
+	padding-top: 0;
+}
+
+.content {
+	display: block;
+	margin-left: 10px;
+	img {
+		display: block;
+		padding: 5px 0;
+	}
+}
+
+.timestamp {
+	color: #88000;
+	margin-left: 10px;
+	/*display: block;*/
+	/*margin-left: 60px;*/
+}

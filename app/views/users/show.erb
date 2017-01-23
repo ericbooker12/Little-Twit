@@ -10,10 +10,13 @@
     </div><!-- /.row -->
 
     <div class="row">
-
-        <div class="col-md-8">
-            <img class="img-responsive" src="http://placekitten.com/750/500" alt="">
+        <div class="col-md-8 col-md-offset-2 mid">
+            <img class="img-responsive cat" src="http://placekitten.com/750/500" alt="">
         </div>
+    </div>
+
+    <div class="row">
+
 
         <form class="form-signin" action="/tweets" method="post">
 
@@ -32,19 +35,23 @@
         </form>
 
         <div class="col-md-4">
-            <h3>Tweets</h3>
+
+            <% if @tweets.length > 0 %>
+                <h3><%= @user.username.capitalize %>'s lil' Twits</h3>
+            <% end %>
+
             <ul class="tweets">
                 <% @tweets.each do |tweet|%>
-                <li class="ind_tweet"><%= tweet.content %>
-
+                <li class="ind_tweet">
+                    <%= tweet.content %>
                 </li>
                 <% end %>
             </ul>
-         </div>
 
+         </div>
     </div>
 </div>
-
+`
 
  <ul class="users">
     <% @users.each do |user|%>
