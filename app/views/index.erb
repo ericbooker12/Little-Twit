@@ -1,32 +1,37 @@
 <div class="row">
-	<div class="col-md-6 col-md-offset-3">
-		<h2>All the lil' Twits</h2>
- 	</div>
+	<% if @allTweets %>
+		<p>True</p>
+		<p>feed</p>
+	<% else %>
+		<p>False</p>
+	<% end %>
 </div>
 
 
-<section class="micropost_form">
-	<div class="row">
-		<div class="col-md-8 ">
-			<ul>
-				<% @tweets.each do |tweet|%>
-					<% date = tweet.created_at %>
-					<li><span class="user">
-						<strong><%=  tweet.user.username.capitalize %></strong>
-					</span>
-					<span class="timestamp">
-						<%= date.strftime("at %I:%M%p on %m/%d/%Y") %>
-					</span>
-					<span class="content">
-						<%= tweet.content %>
-					</span>
-					<hr>
-					</li>
-				<% end %>
-			</ul>
+	<% if current_user %>
+	<section class="micropost_form">
+
+		<div class="row">
+			<div class="col-md-8 col-md-offset-4">
+				<h2>All the lil' Twits</h2>
+				</div>
 		</div>
-	 </div>
- </section>
+
+		<div class="row">
+			<div class="col-md-4">
+				<%= erb :_profile_sidebar %>
+			</div>
+
+			<div class="col-md-8">
+				<%= erb :_tweet %>
+			</div>
+	 	</div>
+ 	</section>
+ 	<% else %>
+ 		<div class="col-md-12 ">
+			<%= erb :_tweet %>
+		</div>
+	<% end %>
 
 
 

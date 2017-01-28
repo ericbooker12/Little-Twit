@@ -1,72 +1,65 @@
-<!-- you'll want to print all tweets -->
-
-<div class="container">
-
-    <!-- Portfolio Item Heading -->
-    <div class="row">
-        <div class="col-lg-12">
-            <h2>Welcome to your page, <%= @user.username.capitalize %>.</h2>
-        </div>
-    </div><!-- /.row -->
-
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2 mid">
-            <img class="img-responsive cat" src="http://placekitten.com/750/500" alt="">
-        </div>
-    </div>
-
-    <div class="row">
-
-
-        <form class="form-signin" action="/tweets" method="post">
-
-            <div class="form-group">
-                <input type="hidden" name="tweets[user_id]" value="<%= session[:user_id] %> ">
-            </div>
-
-            <div class="form-group">
-                <input name="tweets[content]" type="text" id="inputEmail" class="form-control" placeholder="Write your lil' Twit"autofocus="true">
-            </div>
-
-            <div class="form-group">
-            <button class="btn btn-lg btn-primary btn-block" type="submit">POST</button>
-            </div>
-
-        </form>
-
-        <div class="col-md-4">
-
-            <% if @tweets.length > 0 %>
-                <h3><%= @user.username.capitalize %>'s lil' Twits</h3>
-            <% end %>
-
-            <ul class="tweets">
-                <% @tweets.each do |tweet|%>
-                <li class="ind_tweet">
-                    <%= tweet.content %>
-                </li>
-                <% end %>
-            </ul>
-
-         </div>
-    </div>
+<div class="row">
+<div class="col-lg-12">
+<h2>Welcome to your page, <%= @user.username.capitalize %>.</h2>
 </div>
-`
+</div>
 
- <ul class="users">
-    <% @users.each do |user|%>
-    <li class="ind_tweet"><%= user.username %></li>
+<div class="row">
+<div class="col-md-8 col-md-offset-2 mid">
+<img class="img-responsive cat" src="http://placekitten.com/750/500" alt="">
+</div>
+</div>
 
-
-    <form method="post" action="/relationships">
-    <input type="hidden" name="relationship[:follower_id]" value="<%= current_user.id %>">
-    <input type="hidden" name="relationship[:following_id]" value="<%=user.id %>">
-    <input type="submit" value= "Follow <%= user.username %>">
-
-    <% end %>
-
-  </ul>
-  </form>
+<div class="row">
 
 
-    </div>
+<form class="form-signin" action="/tweets" method="post">
+
+<div class="form-group">
+<input type="hidden" name="tweets[user_id]" value="<%= session[:user_id] %> ">
+</div>
+
+<div class="form-group">
+<input name="tweets[content]" type="text" id="inputEmail" class="form-control" placeholder="Write your lil' Twit"autofocus="true">
+</div>
+
+<div class="form-group">
+<button class="btn btn-lg btn-primary btn-block" type="submit">POST</button>
+</div>
+
+</form>
+
+<div class="col-md-4">
+
+<% if @tweets.length > 0 %>
+<h3><%= @user.username.capitalize %>'s lil' Twits</h3>
+<% end %>
+
+<ul class="tweets">
+<% @tweets.each do |tweet|%>
+<li class="ind_tweet">
+<%= tweet.content %>
+</li>
+<% end %>
+</ul>
+
+</div>
+</div>
+</div>
+
+
+<ul class="users">
+<% @users.each do |user|%>
+<li class="ind_tweet"><%= user.username %></li>
+
+
+<form method="post" action="/relationships">
+<input type="hidden" name="relationship[:follower_id]" value="<%= current_user.id %>">
+<input type="hidden" name="relationship[:following_id]" value="<%=user.id %>">
+<input type="submit" value= "Follow <%= user.username %>">
+
+<% end %>
+
+</ul>
+</form>
+-->

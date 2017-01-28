@@ -1,4 +1,5 @@
 get '/tweets' do
+	@allTweets = Tweet.all
 end
 
 get '/tweets/new' do
