@@ -1,7 +1,15 @@
-<section class="micropost_form">
-
-	<h3><%=  current_user.username.capitalize %></h3>
-	<%=  %>
-
-
-</section>
+<div class="row">
+	<aside class="col-md-6">
+		<section class="user_info">
+			<h1><%= @current_user.username.capitalize %></h1>
+		</section>
+	</aside>
+</div>
+<div class="row">
+	<div class="col-md-6">
+		<% if @current_user.tweets.any? %>
+			<p>Twits (<%= @current_user.tweets.count %>)</p>
+			<p>Folowers (<%= @current_user.followers.count %>)</p>
+		<% end %>
+	</div>
+</div>

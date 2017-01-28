@@ -21,7 +21,7 @@ get '/users/:id' do
 	erb :"/users/show"
 end
 
-# get '/users' do 
+# get '/users' do
 # 	@users = User.all
 
 # end
